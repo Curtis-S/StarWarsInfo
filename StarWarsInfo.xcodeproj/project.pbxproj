@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		5D07042A230C01E9004528C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070429230C01E9004528C9 /* AppDelegate.swift */; };
-		5D07042C230C01E9004528C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07042B230C01E9004528C9 /* ViewController.swift */; };
+		5D07042C230C01E9004528C9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07042B230C01E9004528C9 /* MenuViewController.swift */; };
 		5D07042F230C01E9004528C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D07042D230C01E9004528C9 /* Main.storyboard */; };
 		5D070431230C01EA004528C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D070430230C01EA004528C9 /* Assets.xcassets */; };
 		5D070434230C01EA004528C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D070432230C01EA004528C9 /* LaunchScreen.storyboard */; };
+		5D07043F230C0AA1004528C9 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07043E230C0AA1004528C9 /* Characters.swift */; };
+		5D070441230C0AAB004528C9 /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070440230C0AAB004528C9 /* Starships.swift */; };
+		5D070443230C0AC0004528C9 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070442230C0AC0004528C9 /* Vehicles.swift */; };
+		5D070445230C0AF5004528C9 /* InfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070444230C0AF5004528C9 /* InfomationViewController.swift */; };
+		5D070448230C160A004528C9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070447230C160A004528C9 /* Errors.swift */; };
+		5D07044C230C211D004528C9 /* JsonDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07044B230C211D004528C9 /* JsonDownloader.swift */; };
+		5D070471230C231D004528C9 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070470230C231D004528C9 /* MenuTableViewController.swift */; };
+		5D070473230C2380004528C9 /* InfomationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070472230C2380004528C9 /* InfomationTableViewController.swift */; };
+		5D070475230D2910004528C9 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070474230D2910004528C9 /* CharacterViewModel.swift */; };
+		5D070477230D2920004528C9 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070476230D2920004528C9 /* VehicleViewModel.swift */; };
+		5D070479230D29EB004528C9 /* StarshipVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070478230D29EB004528C9 /* StarshipVeiwModel.swift */; };
+		5D07047B230D48C7004528C9 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07047A230D48C7004528C9 /* Stub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D070426230C01E9004528C9 /* StarWarsInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D070429230C01E9004528C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D07042B230C01E9004528C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D07042B230C01E9004528C9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		5D07042E230C01E9004528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D070430230C01EA004528C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D070433230C01EA004528C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D070435230C01EB004528C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D07043E230C0AA1004528C9 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		5D070440230C0AAB004528C9 /* Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
+		5D070442230C0AC0004528C9 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
+		5D070444230C0AF5004528C9 /* InfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewController.swift; sourceTree = "<group>"; };
+		5D070447230C160A004528C9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		5D07044B230C211D004528C9 /* JsonDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloader.swift; sourceTree = "<group>"; };
+		5D070470230C231D004528C9 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		5D070472230C2380004528C9 /* InfomationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationTableViewController.swift; sourceTree = "<group>"; };
+		5D070474230D2910004528C9 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
+		5D070476230D2920004528C9 /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		5D070478230D29EB004528C9 /* StarshipVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipVeiwModel.swift; sourceTree = "<group>"; };
+		5D07047A230D48C7004528C9 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +78,82 @@
 		5D070428230C01E9004528C9 /* StarWarsInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5D07044D230C2131004528C9 /* StubData */,
+				5D07044A230C17CF004528C9 /* Networking */,
+				5D070449230C17C2004528C9 /* ViewModels */,
+				5D070446230C15FA004528C9 /* Errors */,
+				5D07043D230C02E3004528C9 /* models */,
+				5D07043C230C02CB004528C9 /* views */,
+				5D07043B230C02B9004528C9 /* controllers */,
 				5D070429230C01E9004528C9 /* AppDelegate.swift */,
-				5D07042B230C01E9004528C9 /* ViewController.swift */,
 				5D07042D230C01E9004528C9 /* Main.storyboard */,
 				5D070430230C01EA004528C9 /* Assets.xcassets */,
 				5D070432230C01EA004528C9 /* LaunchScreen.storyboard */,
 				5D070435230C01EB004528C9 /* Info.plist */,
 			);
 			path = StarWarsInfo;
+			sourceTree = "<group>";
+		};
+		5D07043B230C02B9004528C9 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D07042B230C01E9004528C9 /* MenuViewController.swift */,
+				5D070444230C0AF5004528C9 /* InfomationViewController.swift */,
+				5D070470230C231D004528C9 /* MenuTableViewController.swift */,
+				5D070472230C2380004528C9 /* InfomationTableViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		5D07043C230C02CB004528C9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		5D07043D230C02E3004528C9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5D07043E230C0AA1004528C9 /* Characters.swift */,
+				5D070440230C0AAB004528C9 /* Starships.swift */,
+				5D070442230C0AC0004528C9 /* Vehicles.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		5D070446230C15FA004528C9 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				5D070447230C160A004528C9 /* Errors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		5D070449230C17C2004528C9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5D070474230D2910004528C9 /* CharacterViewModel.swift */,
+				5D070476230D2920004528C9 /* VehicleViewModel.swift */,
+				5D070478230D29EB004528C9 /* StarshipVeiwModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5D07044A230C17CF004528C9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5D07044B230C211D004528C9 /* JsonDownloader.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5D07044D230C2131004528C9 /* StubData */ = {
+			isa = PBXGroup;
+			children = (
+				5D07047A230D48C7004528C9 /* Stub.swift */,
+			);
+			path = StubData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +227,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D07042C230C01E9004528C9 /* ViewController.swift in Sources */,
+				5D07044C230C211D004528C9 /* JsonDownloader.swift in Sources */,
+				5D070477230D2920004528C9 /* VehicleViewModel.swift in Sources */,
+				5D070445230C0AF5004528C9 /* InfomationViewController.swift in Sources */,
+				5D07042C230C01E9004528C9 /* MenuViewController.swift in Sources */,
+				5D07043F230C0AA1004528C9 /* Characters.swift in Sources */,
 				5D07042A230C01E9004528C9 /* AppDelegate.swift in Sources */,
+				5D070479230D29EB004528C9 /* StarshipVeiwModel.swift in Sources */,
+				5D070473230C2380004528C9 /* InfomationTableViewController.swift in Sources */,
+				5D070475230D2910004528C9 /* CharacterViewModel.swift in Sources */,
+				5D070471230C231D004528C9 /* MenuTableViewController.swift in Sources */,
+				5D070443230C0AC0004528C9 /* Vehicles.swift in Sources */,
+				5D070441230C0AAB004528C9 /* Starships.swift in Sources */,
+				5D070448230C160A004528C9 /* Errors.swift in Sources */,
+				5D07047B230D48C7004528C9 /* Stub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
