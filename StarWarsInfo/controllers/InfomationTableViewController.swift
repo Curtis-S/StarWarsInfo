@@ -71,7 +71,7 @@ class InfomationTableViewController: UITableViewController {
             if menu.menuChoice == .Characters {
                 setFieldNamesForCharacters()
                 costStackView.isHidden = true
-    
+                
             } else {
                 setFieldNamesForVehicles()
                 costStackView.isHidden = false
@@ -80,14 +80,14 @@ class InfomationTableViewController: UITableViewController {
         loadPickerData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-       
+        
     }
-
+    
     // MARK: - Table view data source
-
+    
     // actions
     @IBAction func convertBackToCredits(_ sender: Any) {
         cost = .Credits
@@ -114,20 +114,20 @@ class InfomationTableViewController: UITableViewController {
         UsdButton.isEnabled = false
         CreditButton.isEnabled = true
         swtichUsdAndCreditColor()
-    
+        
     }
     
     @IBAction func confirmExchangeRate(_ sender: Any) {
         cost = .USD
         do {
-           try switchFromCreditsToUsd()
+            try switchFromCreditsToUsd()
             
         } catch InputError.BelowZero {
-        
+            
             showAlert(title: "InputError", message: "please enter a number above 0")
             
         } catch InputError.invalidData{
-             showAlert(title: "InputError", message: "please enter a numbers only")
+            showAlert(title: "InputError", message: "please enter a numbers only")
         }catch{
             print("unown error")
         }
@@ -135,13 +135,13 @@ class InfomationTableViewController: UITableViewController {
     }
     
     @IBAction func convertLengthOrHeight(_ sender: Any) {
-       
+        
         self.lengthAndHeight = .Inches
         
         convertToInches()
         self.EnglishButton.isEnabled = false
         swtichEnglishAndMetricColor()
-         self.MetricButton.isEnabled = true
+        self.MetricButton.isEnabled = true
         
     }
     
@@ -154,7 +154,7 @@ class InfomationTableViewController: UITableViewController {
         self.MetricButton.isEnabled = false
         swtichEnglishAndMetricColor()
         
-
+        
         
     }
     
@@ -181,7 +181,7 @@ class InfomationTableViewController: UITableViewController {
         
     }
     
-  
+    
     func showAlert(title:String,message:String){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "ok", style: .default, handler: nil)
@@ -220,14 +220,14 @@ class InfomationTableViewController: UITableViewController {
         self.CreditButton.setTitleColor(color, for: .normal)
     }
     
-
+    
 }
 
 extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewDataSource {
     
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-      return   1
+        return   1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -235,12 +235,12 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
         if let menu = self.menu {
             switch menu.menuChoice {
             case .Characters :
-              return menu.heros.count
+                return menu.heros.count
             case .Vehicles:
-               return menu.vehicles.count
+                return menu.vehicles.count
             case .Starships:
                 return menu.starships.count
-        }
+            }
             
         }
         
@@ -310,8 +310,8 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                 exchangeRateStackkView.isHidden = true
             }
         }
-     
-      
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -321,9 +321,9 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
             case .Characters :
                 return menu.heros[row].name
             case .Vehicles:
-               return menu.vehicles[row].name
+                return menu.vehicles[row].name
             case .Starships:
-               return menu.starships[row].name
+                return menu.starships[row].name
             }
         }
         return "Data retirval error"
@@ -356,7 +356,7 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                 self.infoAnswer3.text = "\(heroViewModel.length) M"
                 
             }
-   
+            
         case .Characters:
             if lengthAndHeight == .Inches {
                 let row = self.entityPickerView.selectedRow(inComponent: 0)
@@ -383,7 +383,7 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
             }
             
         }
-       
+        
     }
     
     
@@ -392,22 +392,22 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
         switch menu!.menuChoice {
         case .Characters:
             break
-    
+            
         case .Vehicles:
             if cost == .USD {
                 let row = self.entityPickerView.selectedRow(inComponent: 0)
                 let vehicleViewModel = VehicleViewModel(vehicle: menu!.vehicles[row])
                 guard let rate = Double(self.exchangeRateTextField.text!) else {
                     throw InputError.invalidData
-                    }
-                    
-              
+                }
+                
+                
                 if rate <= 0 {
-                     throw InputError.BelowZero
+                    throw InputError.BelowZero
                 }else{
                     self.infoAnswer2.text = "\(String(format: "%.2f", vehicleViewModel.cost * rate )) USD"
                 }
-               
+                
                 
             } else {
                 let row = self.entityPickerView.selectedRow(inComponent: 0)
@@ -422,24 +422,24 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                 guard let rate = Double(self.exchangeRateTextField.text!) else {
                     throw InputError.invalidData
                 }
- 
+                
                 if rate <= 0 {
                     throw InputError.BelowZero
                 }else{
                     self.infoAnswer2.text = "\(String(format: "%.2f", starshipViewModel.cost * rate) ) USD"
                 }
                 
-                    
+                
                 
                 
             } else {
                 let row = self.entityPickerView.selectedRow(inComponent: 0)
-                 let starshipViewModel = StarshipViewModel(starship: menu!.starships[row])
+                let starshipViewModel = StarshipViewModel(starship: menu!.starships[row])
                 self.infoAnswer2.text = "\(starshipViewModel.cost) Cr"
                 
             }
         }
-     
+        
     }
     
     
@@ -454,41 +454,41 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                 if menu.heros.count == 0 {
                     
                     
-                   menu.client.getCharatcers(){  heroPage , error in
-                    DispatchQueue.main.async {
-                    self.group.enter()
-                        if let someheros = heroPage {
-                           menu.heroPage = someheros
-                           menu.heros += someheros.results
-                            menu.heros.sort()
-                            self.group.leave()
-                           self.group.enter()
-                            for index in 0..<menu.heros.count {
-                                print("\(index)")
-                                menu.client.getCharacterHomeland(from: menu.heros[index].homeworld){
-                                    homeworld , error in
-                                    DispatchQueue.main.async {
-                                        menu.heros[index].setHomeWorld(homeworld: homeworld ?? "cannot retrive Homeland")
+                    menu.client.getCharatcers(){  heroPage , error in
+                        DispatchQueue.main.async {
+                            self.group.enter()
+                            if let someheros = heroPage {
+                                menu.heroPage = someheros
+                                menu.heros += someheros.results
+                                menu.heros.sort()
+                                self.group.leave()
+                                self.group.enter()
+                                for index in 0..<menu.heros.count {
+                                    print("\(index)")
+                                    menu.client.getCharacterHomeland(from: menu.heros[index].homeworld){
+                                        homeworld , error in
+                                        DispatchQueue.main.async {
+                                            menu.heros[index].setHomeWorld(homeworld: homeworld ?? "cannot retrive Homeland")
+                                        }
+                                        
                                     }
                                     
+                                    
                                 }
+                                self.group.leave()
                                 
-                               
                             }
+                            if let e = error {
+                                print (e.localizedDescription)
+                            }
+                            
+                            self.group.enter()
+                            self.entityPickerView.reloadAllComponents()
+                            self.displayBiggestAndSmallest(for: .Characters)
                             self.group.leave()
                             
                         }
-                        if let e = error {
-                            print (e.localizedDescription)
-                        }
-                    
-                        self.group.enter()
-                        self.entityPickerView.reloadAllComponents()
-                        self.displayBiggestAndSmallest(for: .Characters)
-                        self.group.leave()
-                    
-                    }
-                    
+                        
                     }
                     
                 } else {
@@ -507,7 +507,7 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                             
                             if let vehicles = vehicles {
                                 menu.vehicles = vehicles
-                                 menu.vehicles.sort()
+                                menu.vehicles.sort()
                                 
                             }
                             if let e = error {

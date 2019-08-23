@@ -26,7 +26,7 @@ struct VehicleViewModel {
         self.length  =  self.length * 39.37
     }
     
-   
+    
     
 }
 
