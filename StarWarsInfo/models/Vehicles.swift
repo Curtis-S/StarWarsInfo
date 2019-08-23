@@ -9,7 +9,13 @@
 import Foundation
 
 
-struct Vehicle {
+struct VehicleRoot: Codable {
+    let next:String?
+    let results:[Vehicle]
+}
+
+
+struct Vehicle :Codable {
     
     let name:String
     let manufacturer:String
@@ -19,5 +25,15 @@ struct Vehicle {
     let crew:String
     
     
+    
+}
+
+
+extension Vehicle: Comparable {
+    static func < (lhs: Vehicle, rhs: Vehicle) -> Bool {
+        let first = Double(lhs.length)!
+        let second = Double(rhs.length)!
+        return first < second
+    }
     
 }

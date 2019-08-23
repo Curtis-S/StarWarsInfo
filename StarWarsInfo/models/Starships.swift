@@ -9,8 +9,13 @@
 import Foundation
 
 
+struct StarshipRoot: Codable {
+    let next:String?
+    let results:[Starship]
+}
 
-struct Starship {
+
+struct Starship: Codable {
     let name:String
     let length:String
     let manufacturer:String
@@ -18,4 +23,17 @@ struct Starship {
     let costInCredits:String
     let crew:String
     
+}
+
+
+extension Starship: Comparable {
+    static func < (lhs: Starship, rhs: Starship) -> Bool {
+        let first = Double(lhs.length)!
+        let second = Double(rhs.length)!
+        return first < second
+        
+    }
+    
+    
+   
 }

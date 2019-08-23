@@ -14,9 +14,12 @@ struct CharatcerViewModel {
     let name:String
     let born:String
     let home:String
-    let height:Double
+    var height:Double
     let eyes:String
     let hair:String
+    var englishHeightInInches:Double {
+       return self.height * 39.37
+    }
     
 }
 
@@ -34,6 +37,10 @@ extension CharatcerViewModel {
         }
 
         self.hair =  character.hairColor
+    }
+    
+    mutating func convertHeightToInches() {
+        self.height = self.height * 39.37
     }
     
 }

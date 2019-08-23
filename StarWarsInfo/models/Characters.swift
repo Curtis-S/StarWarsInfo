@@ -8,17 +8,46 @@
 
 import Foundation
 
+struct Root: Codable {
+    let next:String?
+    let results:[StarwarsCharacter]
+}
 
-struct StarwarsCharacter {
+
+struct StarwarsCharacter:Codable {
     let name:String
     let birthYear:String
-    let homeworld:String
+    var homeworld:String
     let height:String
     let eyeColor:String
     let hairColor:String
     
+    mutating func setHomeWorld (homeworld:String){
+        self.homeworld = homeworld
+    }
+    
 }
 
-struct CharacterHomeWorld {
+struct CharacterHomeWorld:Codable {
     let name:String
 }
+
+
+
+extension StarwarsCharacter: Comparable {
+    
+    static func < (lhs: StarwarsCharacter, rhs: StarwarsCharacter) -> Bool {
+        let first = Double(lhs.height)!
+        let second = Double(rhs.height)!
+        return first < second
+        
+        
+       
+    }
+    
+    
+    
+    
+    
+}
+

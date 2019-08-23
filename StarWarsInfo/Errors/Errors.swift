@@ -9,12 +9,21 @@
 import Foundation
 
 
-enum JsonConnectionError: Error {
+enum StarWarsApiClientError: Error {
     case requestFailed
     case responseUnsuccessful(statusCode: Int)
     case invalidData
     case jsonParsingFailure
     case invalidUrl
 }
+
+
+enum InputError: Error {
+    case BelowZero
+    case invalidData
+    
+}
+
+
 
 

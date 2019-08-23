@@ -20,8 +20,8 @@ class JSONDownloader {
         self.init(configuration: .default)
     }
     
-    typealias JSON = [String: AnyObject]
-    typealias JSONTaskCompletionHandler = (JSON?, JsonConnectionError?) -> Void
+    typealias JSON = [String: Any]
+    typealias JSONTaskCompletionHandler = (JSON?, StarWarsApiClientError?) -> Void
     
     func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
         let task = session.dataTask(with: request) { data, response, error in

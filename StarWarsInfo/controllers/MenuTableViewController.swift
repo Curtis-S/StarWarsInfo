@@ -9,19 +9,50 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+    
+    
+    var heros: [StarwarsCharacter] = []
+    var vehicles:[Vehicle] = []
+    var starships:[Starship] = []
+    let client = StarWarsApiClient()
+    var heroPage:Root?
+   
+    
+    
+    
+    
+    enum MenuSelection {
+        case Characters
+        case Vehicles
+        case Starships
+        
+    }
+    
+    var menuChoice: MenuSelection = .Characters
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        
+            print("finashed ")
+      
+        
+        print("hello")
         
         self.tableView.backgroundColor = UIColor.black
         
         
+    }
+    
+    
+    func test(){
+        
+        
+        
+    }
+    
+    func getAllHeros(){
+      
     }
 
     // MARK: - Table view data source
@@ -73,14 +104,37 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // Pass the selected object to the new view cont
+        
+        switch segue.identifier {
+        case "ShowCharacters":
+            self.menuChoice = .Characters
+            
+            break
+        case "ShowVehicles":
+             self.menuChoice = .Vehicles
+            break
+            
+        case "ShowStarships":
+             self.menuChoice = .Starships
+            break
+        
+        default:
+             self.menuChoice = .Vehicles
+            break
+        }
+        
+        let infoController = segue.destination as! InfomationTableViewController
+        
+        infoController.menu = self
+        
     }
-    */
+    
 
 }

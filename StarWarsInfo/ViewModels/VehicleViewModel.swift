@@ -13,12 +13,20 @@ struct VehicleViewModel {
     
     let name:String
     let make:String
-    let cost:Double
-    let length:Double
+    var cost:Double
+    var length:Double
     let vClass:String
     let crew:String
     
+    mutating func costInUsd(rate:Double)  {
+        self.cost  =  self.cost * rate
+    }
     
+    mutating func englishHeightInInches()  {
+        self.length  =  self.length * 39.37
+    }
+    
+   
     
 }
 

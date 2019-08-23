@@ -24,6 +24,8 @@
 		5D070477230D2920004528C9 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070476230D2920004528C9 /* VehicleViewModel.swift */; };
 		5D070479230D29EB004528C9 /* StarshipVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070478230D29EB004528C9 /* StarshipVeiwModel.swift */; };
 		5D07047B230D48C7004528C9 /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07047A230D48C7004528C9 /* Stub.swift */; };
+		5DD1742C230EADC900FA0429 /* StarWarsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1742B230EADC900FA0429 /* StarWarsApiClient.swift */; };
+		5DD1742E230EAE2800FA0429 /* UrlEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD1742D230EAE2800FA0429 /* UrlEnums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		5D070476230D2920004528C9 /* VehicleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
 		5D070478230D29EB004528C9 /* StarshipVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipVeiwModel.swift; sourceTree = "<group>"; };
 		5D07047A230D48C7004528C9 /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		5DD1742B230EADC900FA0429 /* StarWarsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApiClient.swift; sourceTree = "<group>"; };
+		5DD1742D230EAE2800FA0429 /* UrlEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlEnums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				5D07044B230C211D004528C9 /* JsonDownloader.swift */,
+				5DD1742B230EADC900FA0429 /* StarWarsApiClient.swift */,
+				5DD1742D230EAE2800FA0429 /* UrlEnums.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 				5D070477230D2920004528C9 /* VehicleViewModel.swift in Sources */,
 				5D070445230C0AF5004528C9 /* InfomationViewController.swift in Sources */,
 				5D07042C230C01E9004528C9 /* MenuViewController.swift in Sources */,
+				5DD1742E230EAE2800FA0429 /* UrlEnums.swift in Sources */,
 				5D07043F230C0AA1004528C9 /* Characters.swift in Sources */,
 				5D07042A230C01E9004528C9 /* AppDelegate.swift in Sources */,
 				5D070479230D29EB004528C9 /* StarshipVeiwModel.swift in Sources */,
@@ -241,6 +248,7 @@
 				5D070441230C0AAB004528C9 /* Starships.swift in Sources */,
 				5D070448230C160A004528C9 /* Errors.swift in Sources */,
 				5D07047B230D48C7004528C9 /* Stub.swift in Sources */,
+				5DD1742C230EADC900FA0429 /* StarWarsApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

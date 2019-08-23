@@ -13,11 +13,19 @@ import Foundation
 
 struct StarshipViewModel {
     let name:String
-    let length:Double
+    var length:Double
     let make:String
     let sClass: String
-    let cost:Double
+    var cost:Double
     let crew:String
+    
+    mutating func costInUsd(rate:Double)  {
+        self.cost  =  self.cost * rate
+    }
+    
+    mutating func englishHeightInInches()  {
+        self.length  =  self.length * 39.37
+    }
     
 }
 
