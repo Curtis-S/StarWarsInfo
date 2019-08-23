@@ -77,17 +77,12 @@ class InfomationTableViewController: UITableViewController {
                 costStackView.isHidden = false
             }
         }
+        print("befor data")
         loadPickerData()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+         print("after")
     }
     
-    // MARK: - Table view data source
-    
+
     // actions
     @IBAction func convertBackToCredits(_ sender: Any) {
         cost = .Credits
@@ -224,7 +219,7 @@ class InfomationTableViewController: UITableViewController {
 }
 
 extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewDataSource {
-    
+    //picker delegate and data
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return   1
@@ -447,7 +442,7 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
     
     func loadPickerData(){
         if let menu = self.menu {
-            
+             print("there is menu")
             switch menu.menuChoice {
                 
             case .Characters:
@@ -498,9 +493,9 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                 break
                 
             case .Vehicles:
-                
+                 print("picked vehicles")
                 if menu.vehicles.count == 0 {
-                    
+                     print("0 vehicles ")
                     
                     menu.client.getVehicles(){  vehicles , error in
                         DispatchQueue.main.async {
@@ -508,7 +503,7 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                             if let vehicles = vehicles {
                                 menu.vehicles = vehicles
                                 menu.vehicles.sort()
-                                
+                                 print("vehilces recived and sorted")
                             }
                             if let e = error {
                                 print (e.localizedDescription)
@@ -516,6 +511,7 @@ extension InfomationTableViewController : UIPickerViewDelegate ,UIPickerViewData
                             
                             
                             self.entityPickerView.reloadAllComponents()
+                             print("bdata loaded to picker")
                             self.displayBiggestAndSmallest(for: .Vehicles)
                         }
                         
