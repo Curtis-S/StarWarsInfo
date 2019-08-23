@@ -15,9 +15,7 @@
 		5D07043F230C0AA1004528C9 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07043E230C0AA1004528C9 /* Characters.swift */; };
 		5D070441230C0AAB004528C9 /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070440230C0AAB004528C9 /* Starships.swift */; };
 		5D070443230C0AC0004528C9 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070442230C0AC0004528C9 /* Vehicles.swift */; };
-		5D070445230C0AF5004528C9 /* InfomationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070444230C0AF5004528C9 /* InfomationViewController.swift */; };
 		5D070448230C160A004528C9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070447230C160A004528C9 /* Errors.swift */; };
-		5D07044C230C211D004528C9 /* JsonDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D07044B230C211D004528C9 /* JsonDownloader.swift */; };
 		5D070471230C231D004528C9 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070470230C231D004528C9 /* MenuTableViewController.swift */; };
 		5D070473230C2380004528C9 /* InfomationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070472230C2380004528C9 /* InfomationTableViewController.swift */; };
 		5D070475230D2910004528C9 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D070474230D2910004528C9 /* CharacterViewModel.swift */; };
@@ -39,9 +37,7 @@
 		5D07043E230C0AA1004528C9 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		5D070440230C0AAB004528C9 /* Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
 		5D070442230C0AC0004528C9 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
-		5D070444230C0AF5004528C9 /* InfomationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationViewController.swift; sourceTree = "<group>"; };
 		5D070447230C160A004528C9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		5D07044B230C211D004528C9 /* JsonDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDownloader.swift; sourceTree = "<group>"; };
 		5D070470230C231D004528C9 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		5D070472230C2380004528C9 /* InfomationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfomationTableViewController.swift; sourceTree = "<group>"; };
 		5D070474230D2910004528C9 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
@@ -102,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				5D07042B230C01E9004528C9 /* MenuViewController.swift */,
-				5D070444230C0AF5004528C9 /* InfomationViewController.swift */,
 				5D070470230C231D004528C9 /* MenuTableViewController.swift */,
 				5D070472230C2380004528C9 /* InfomationTableViewController.swift */,
 			);
@@ -147,7 +142,6 @@
 		5D07044A230C17CF004528C9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				5D07044B230C211D004528C9 /* JsonDownloader.swift */,
 				5DD1742B230EADC900FA0429 /* StarWarsApiClient.swift */,
 				5DD1742D230EAE2800FA0429 /* UrlEnums.swift */,
 			);
@@ -233,9 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D07044C230C211D004528C9 /* JsonDownloader.swift in Sources */,
 				5D070477230D2920004528C9 /* VehicleViewModel.swift in Sources */,
-				5D070445230C0AF5004528C9 /* InfomationViewController.swift in Sources */,
 				5D07042C230C01E9004528C9 /* MenuViewController.swift in Sources */,
 				5DD1742E230EAE2800FA0429 /* UrlEnums.swift in Sources */,
 				5D07043F230C0AA1004528C9 /* Characters.swift in Sources */,
