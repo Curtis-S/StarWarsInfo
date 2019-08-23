@@ -17,7 +17,6 @@ class StarWarsApiClient {
     
     let decoder = JSONDecoder()
     let session: URLSession
-    let downloader = JSONDownloader()
     
     init(configuration: URLSessionConfiguration) {
         self.session = URLSession(configuration: configuration)
